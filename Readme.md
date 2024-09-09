@@ -32,7 +32,15 @@ This project is a specialized document processing system, incorporating Streamli
      - `assistant2_description` : description for the LLM agent that is used to answer network queries
      - `assistant1_system_message` : System prompt for the LLM agent that is used to answer direct queries
      - `assistant2_system_message` : System prompt for the LLM agent that is used to answer network queries
-
+## Usage
+1. **Install Dependencies:** Install necessary Python packages with `pip install -r requirements.txt`.
+2. **Run the Main Script:**-
+   - Use Litellm to create an endpoint to use Llama3. Use `litellm --config ./config.yaml --port 4000`.
+   - Ensure that all services like Qdrant are up and running.
+3. **To use API:**-
+   - Use uvicorn, Use `uvicorn main:app --reload` 
+4. **To use Dash App**
+   - Use `python chat_app.py`
 ## Qdrant Setup
 1. **Create Account & Cluster:** Sign up at Qdrant Cloud, create a cluster, and obtain the endpoint URL and API key.
 2. **Update Configurations:** Update the `.env` file with your Qdrant credentials.
